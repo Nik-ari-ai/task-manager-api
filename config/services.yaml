@@ -13,6 +13,11 @@ services:
             - '../src/OpenApi/'
             - '../src/Kernel.php'
 
+    App\Controller\:
+        resource: '../src/Controller/'
+        tags:
+            - controller.service_arguments
+
     App\EventListener\ExceptionListener:
         arguments:
             $debug: '%kernel.debug%'
