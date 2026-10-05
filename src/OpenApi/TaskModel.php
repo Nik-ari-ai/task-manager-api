@@ -2,9 +2,10 @@
 
 namespace App\OpenApi;
 
+use Nelmio\ApiDocBundle\Attribute\Model;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(schema: 'Task', title: 'Task')]
+#[OA\Schema]
 class TaskModel
 {
     #[OA\Property(type: 'integer', example: 1)]
@@ -16,7 +17,7 @@ class TaskModel
     #[OA\Property(type: 'string', nullable: true, example: 'Sales report for May')]
     public ?string $description;
 
-    #[OA\Property(ref: '#/components/schemas/Status')]
+    #[OA\Property(ref: new Model(type: StatusModel::class))]
     public StatusModel $status;
 
     #[OA\Property(property: 'created_at', type: 'string', format: 'date-time', example: '2026-01-01T12:00:00+00:00')]

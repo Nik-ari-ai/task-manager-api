@@ -4,7 +4,7 @@ namespace App\OpenApi;
 
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(schema: 'Status', title: 'Status')]
+#[OA\Schema]
 class StatusModel
 {
     #[OA\Property(type: 'integer', example: 1)]
