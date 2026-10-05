@@ -1,0 +1,9 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Task Manager API
+            description: REST API for managing tasks and statuses
+            version: 1.0.0
+    areas:
+        path_patterns:
+            - ^/api(?!/doc$)
